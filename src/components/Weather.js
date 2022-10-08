@@ -18,7 +18,6 @@ const Weather = () => {
 
     if(!data) return null
   
-    console.log(data)
     return (
     <div>
 
