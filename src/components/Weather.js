@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-const lat = '32.7767'
-const lon = '96.7970'
+const lat = '32.77'
+const lon = '-96.79'
 const key = '14146d00fb318db04b855675ae052d9c'
 
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`
@@ -22,7 +22,9 @@ const Weather = () => {
     return (
     <div>
 
-        <p> </p>
+        <p> 
+            {(((data.main.temp - 273.15)*1.8)+32).toFixed(1)}
+        </p>
 
     </div>
   )
