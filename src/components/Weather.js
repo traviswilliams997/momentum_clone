@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import {WeatherContainer, Temp, City} from './WeatherStyles'
 const lat = '32.77'
 const lon = '-96.79'
 const key = '14146d00fb318db04b855675ae052d9c'
@@ -19,13 +20,14 @@ const Weather = () => {
     if(!data) return null
   
     return (
-    <div>
+    <WeatherContainer>
 
-        <p> 
+        <Temp> 
             {(((data.main.temp - 273.15)*1.8)+32).toFixed(1)}
-        </p>
+        </Temp>
+        <City>Dallas, TX</City>
 
-    </div>
+    </WeatherContainer>
   )
 }
 
